@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools {
-        maven 'maven'
-    }
     stages ('checkout') {
         steps { branch:'main',url:'https://github.com/himkar-cmd/Jenkins.git'}
     }
