@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    tools {
+        maven 'maven'
+    }
+    stages ('checkout') {
+        steps { branch:'main',url:''}
+    }
+    stage ('Build'){
+        steps {sh 'mvn clean package'}
+    }
+    stage ('test') {
+        steps {echo 'Hello'}
+    }
+    stage ('deploy') {
+        steps {echo 'deploy'}
+    }
+}
