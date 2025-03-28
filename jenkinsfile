@@ -1,6 +1,7 @@
 pipeline {
     agent any
-    stages ('checkout') {
+stages {
+    stage ('checkout') {
         steps {git branch:'main',url:'https://github.com/himkar-cmd/Jenkins.git'}
     }
     stage ('Build'){
@@ -12,4 +13,5 @@ pipeline {
     stage ('deploy') {
         steps {echo 'deploy'}
     }
+}
 }
