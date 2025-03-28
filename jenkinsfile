@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages ('checkout') {
-        steps { branch:'main',url:'https://github.com/himkar-cmd/Jenkins.git'}
+        steps {git branch:'main',url:'https://github.com/himkar-cmd/Jenkins.git'}
     }
     stage ('Build'){
         steps {sh 'mvn clean package'}
