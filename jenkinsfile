@@ -5,7 +5,7 @@ stages {
         steps {git branch:'main',url:'https://github.com/himkar-cmd/Jenkins.git'}
     }
     stage ('Build'){
-        steps {sh 'mvn clean package'}
+        steps {echo "Build"}
     }
     stage ('test') {
         steps {echo 'Hello'}
