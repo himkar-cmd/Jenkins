@@ -4,7 +4,7 @@ pipeline {
         maven 'maven'
     }
     stages ('checkout') {
-        steps { branch:'main',url:''}
+        steps { branch:'main',url:'https://github.com/himkar-cmd/Jenkins.git'}
     }
     stage ('Build'){
         steps {sh 'mvn clean package'}
